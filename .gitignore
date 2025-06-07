@@ -1,0 +1,30 @@
+# Rust build outputs
+/target/
+**/target/
+
+# Backup files
+**/*.rs.bk
+
+# Dependency lock files (for workspace root, handled per crate)
+Cargo.lock
+**/Cargo.lock
+
+# macOS system files
+.DS_Store
+
+# Node/npm (if using frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage/test outputs
+coverage/
+.coverage/
+
+# Logs
+*.log
+
+# Environment variable files
+.env
+.env.*
