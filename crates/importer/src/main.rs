@@ -1,7 +1,7 @@
 use anyhow::{Context, Result};
 use clap::Parser;
 use rusqlite::{params, Connection};
-use serde::{Deserialize, Deserializer};
+use serde::Deserialize;
 use serde_json::Value;
 use std::collections::HashMap;
 use std::fs;
@@ -64,7 +64,7 @@ struct MappingNode {
 struct Message {
     id: String,
     author: Author,
-    #[serde(with = "flexible_time")]
+    #[serde(deserialize_with = "flexible_time::deserialize")]
     create_time: Option<f64>,
     update_time: Option<f64>,
     content: Content,
