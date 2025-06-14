@@ -6,7 +6,6 @@
 **/*.rs.bk
 
 # Dependency lock files (for workspace root, handled per crate)
-Cargo.lock
 **/Cargo.lock
 
 # macOS system files
